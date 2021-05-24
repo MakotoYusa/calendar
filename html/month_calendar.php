@@ -2,10 +2,6 @@
 require_once '../conf/const.php';
 require_once MODEL_PATH . 'db.php';
 
-
-// セッションの開始
-session_start();
-
 // データベースへ接続
 $db = get_db_connect();
 
@@ -53,11 +49,11 @@ for($day = 1; $day <= $day_count; $day++, $day_of_the_week++){
     $date = $year_month . '-' . $day;
     // 今日の日付の場合、class="today"を追加
     if($today == $date){
-        $week .= '<td class="today">' . $day;
+        $week .= '<td class="today"><a href="day_calendar.php?date=' . $date . '">' . $day;
     }else{
-        $week .= '<td>' . $day;
+        $week .= '<td><a href="day_calendar.php?date=' . $date . '">' . $day;
     }
-    $week .= '</td>';
+    $week .= '</a></td>';
 
     // 週終り、または月終りの場合
     if($day_of_the_week % 7 == 6 || $day == $day_count){

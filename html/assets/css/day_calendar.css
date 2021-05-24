@@ -1,0 +1,11 @@
+.container {
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 80px;
+}
+h2 {
+    margin-bottom: 30px;
+}
+
+a {
+    color: black;
+}
