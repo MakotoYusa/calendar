@@ -12,7 +12,7 @@ function insert_schedule($db, $date, $schedule_name, $start_time, $end_time)
         create_datetime,
         update_datetime
       )
-    VALUES(?, ?, ?, ?, NOW(), NOW());
+    VALUES(CAST(? AS DATE), ?, CAST(? AS TIME), CAST(? AS TIME), NOW(), NOW());
   ";
 
   return execute_query($db, $sql, [$date, $schedule_name, $start_time, $end_time]);

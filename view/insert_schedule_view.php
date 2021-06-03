@@ -16,12 +16,13 @@
         </div>
         <div class="form-group">
             <label for="start_time">開始時間：</label>
-            <input class="form-control" type="time" name="start_name" id="start_name">
+            <input class="form-control" type="time" name="start_time" id="start_time">
         </div>
         <div class="form-group">
             <label for="end_time">終了時間：</label>
             <input class="form-control" type="time" name="end_time" id="end_time">
         </div>
+        <input type="hidden" name="date" id="date" value="<?php echo $date ?>">
         <input type="submit" value="予定を追加">
     </form>
 </body>

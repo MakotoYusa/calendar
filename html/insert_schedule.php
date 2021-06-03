@@ -12,12 +12,18 @@ $date = $_GET['date'];
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     // データの受け取り
+    $date = get_post('date');
     $schedule_name = get_post('schedule_name');
     $start_time = get_post('start_time');
     $end_time = get_post('end_time');
     
+    // var_dump($date);
+    // var_dump($schedule_name);
+    // var_dump($start_time);
+    // var_dump($end_time);
     insert_schedule($db, $date, $schedule_name, $start_time, $end_time);
-    redirect_to('day_calendar.php?date=' . $date);
+    
+    redirect_to('day_calendar.php?date='. $date);
 
 }
 

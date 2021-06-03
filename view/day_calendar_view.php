@@ -30,6 +30,8 @@
                     <td><?php print (h($schedule['schedule_name'])) ?></td>
                     <td><?php print (h($schedule['start_time'])) ?></td>
                     <td><?php print (h($schedule['end_time'])) ?></td>
+                    <td><a href="#">編集</a></td>
+                    <td><a href="#">削除</a></td>
                 </tr>
                 <?php } ?>
             </tbody>
